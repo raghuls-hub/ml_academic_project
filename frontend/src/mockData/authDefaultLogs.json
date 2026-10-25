@@ -1,0 +1,75 @@
+{
+  "default": {
+    "user_id": "USR-8819",
+    "login_hour": 3,
+    "is_weekend": 1,
+    "failed_logins": 5,
+    "usb_device_connected": 1,
+    "files_accessed": 380,
+    "data_transfer_mb": 840.5,
+    "privileged_commands_count": 4
+  },
+  "presets": [
+    {
+      "id": "benign-analyst",
+      "name": "Benign - Normal Daytime Analyst",
+      "severity": "LOW",
+      "data": {
+        "user_id": "USR-1042",
+        "login_hour": 10,
+        "is_weekend": 0,
+        "failed_logins": 0,
+        "usb_device_connected": 0,
+        "files_accessed": 22,
+        "data_transfer_mb": 12.4,
+        "privileged_commands_count": 0
+      }
+    },
+    {
+      "id": "off-hours-developer",
+      "name": "Medium - Late Night Developer Work",
+      "severity": "MEDIUM",
+      "data": {
+        "user_id": "USR-3051",
+        "login_hour": 22,
+        "is_weekend": 0,
+        "failed_logins": 1,
+        "usb_device_connected": 0,
+        "files_accessed": 65,
+        "data_transfer_mb": 45.0,
+        "privileged_commands_count": 1
+      }
+    },
+    {
+      "id": "insider-exfiltration",
+      "name": "Critical - 3 AM Weekend USB Exfiltration",
+      "severity": "CRITICAL",
+      "data": {
+        "user_id": "USR-8819",
+        "login_hour": 3,
+        "is_weekend": 1,
+        "failed_logins": 5,
+        "usb_device_connected": 1,
+        "files_accessed": 380,
+        "data_transfer_mb": 840.5,
+        "privileged_commands_count": 4
+      }
+    },
+    {
+      "id": "credential-compromise",
+      "name": "Critical - Brute Force & Privileged Account Takeover",
+      "severity": "CRITICAL",
+      "data": {
+        "user_id": "USR-9901",
+        "login_hour": 2,
+        "is_weekend": 0,
+        "failed_logins": 12,
+        "usb_device_connected": 0,
+        "files_accessed": 195,
+        "data_transfer_mb": 310.0,
+        "privileged_commands_count": 7
+      }
+    }
+  ]
+}
+

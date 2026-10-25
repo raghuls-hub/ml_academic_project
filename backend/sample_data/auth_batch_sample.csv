@@ -1,0 +1,12 @@
+user_id,login_hour,is_weekend,failed_logins,usb_device_connected,files_accessed,data_transfer_mb,privileged_commands_count
+USR-1042,10,0,0,0,18,12.5,0
+USR-8819,3,1,5,1,380,840.5,4
+USR-3051,22,0,1,0,65,45.0,1
+USR-9901,2,0,12,0,195,310.0,7
+USR-1002,14,0,0,0,25,8.0,0
+USR-5541,4,1,3,1,210,540.0,3
+USR-2099,11,0,0,0,32,15.2,0
+USR-7104,1,0,8,1,410,920.0,6
+USR-3312,16,0,0,0,19,9.8,0
+USR-4421,9,0,0,0,28,14.0,0
+

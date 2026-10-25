@@ -1,0 +1,59 @@
+# ==============================================================================
+# Root Git Ignore - AI Cybersecurity Operations Center (SOC)
+# ==============================================================================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Python & Backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+backend/__pycache__/
+backend/*/__pycache__/
+backend/artifacts/*.joblib
+backend/artifacts/*.pkl
+!backend/artifacts/.gitkeep
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+tmp/
+temp/
+scratch/
+

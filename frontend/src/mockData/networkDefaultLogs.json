@@ -1,0 +1,92 @@
+{
+  "default": {
+    "protocol_type": "tcp",
+    "service": "private",
+    "flag": "S0",
+    "src_bytes": 0,
+    "dst_bytes": 0,
+    "count": 285,
+    "srv_count": 285,
+    "serror_rate": 1.0,
+    "rerror_rate": 0.0,
+    "same_srv_rate": 1.0,
+    "diff_srv_rate": 0.0
+  },
+  "presets": [
+    {
+      "id": "benign-web-traffic",
+      "name": "Benign - Standard HTTPS Flow",
+      "severity": "LOW",
+      "data": {
+        "protocol_type": "tcp",
+        "service": "http",
+        "flag": "SF",
+        "src_bytes": 340,
+        "dst_bytes": 4520,
+        "count": 4,
+        "srv_count": 4,
+        "serror_rate": 0.0,
+        "rerror_rate": 0.0,
+        "same_srv_rate": 1.0,
+        "diff_srv_rate": 0.0
+      }
+    },
+    {
+      "id": "dos-syn-flood",
+      "name": "Critical - SYN Flood Volumetric DoS (Neptune)",
+      "severity": "CRITICAL",
+      "data": {
+        "protocol_type": "tcp",
+        "service": "private",
+        "flag": "S0",
+        "src_bytes": 0,
+        "dst_bytes": 0,
+        "count": 285,
+        "srv_count": 285,
+        "serror_rate": 1.0,
+        "rerror_rate": 0.0,
+        "same_srv_rate": 1.0,
+        "diff_srv_rate": 0.0
+      }
+    },
+    {
+      "id": "probe-portscan",
+      "name": "High - Nmap / Satan Stealth Portsweep",
+      "severity": "HIGH",
+      "data": {
+        "protocol_type": "tcp",
+        "service": "other",
+        "flag": "REJ",
+        "src_bytes": 0,
+        "dst_bytes": 0,
+        "count": 140,
+        "srv_count": 3,
+        "serror_rate": 0.05,
+        "rerror_rate": 0.95,
+        "same_srv_rate": 0.05,
+        "diff_srv_rate": 0.85
+      }
+    },
+    {
+      "id": "u2r-priv-escalation",
+      "name": "Critical - Telnet Buffer Overflow (User-to-Root)",
+      "severity": "CRITICAL",
+      "data": {
+        "protocol_type": "tcp",
+        "service": "telnet",
+        "flag": "SF",
+        "src_bytes": 2800,
+        "dst_bytes": 14500,
+        "count": 2,
+        "srv_count": 2,
+        "serror_rate": 0.0,
+        "rerror_rate": 0.0,
+        "same_srv_rate": 1.0,
+        "diff_srv_rate": 0.0,
+        "root_shell": 1,
+        "su_attempted": 1
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,11 @@
+duration,protocol_type,service,flag,src_bytes,dst_bytes,count,srv_count,serror_rate,rerror_rate,same_srv_rate,diff_srv_rate
+0,tcp,http,SF,340,4520,4,4,0.0,0.0,1.0,0.0
+0,tcp,private,S0,0,0,285,285,1.0,0.0,1.0,0.0
+0,tcp,other,REJ,0,0,140,3,0.05,0.95,0.05,0.85
+15,tcp,telnet,SF,2800,14500,2,2,0.0,0.0,1.0,0.0
+0,udp,domain_u,SF,44,112,12,12,0.0,0.0,1.0,0.0
+0,tcp,smtp,SF,1024,380,1,1,0.0,0.0,1.0,0.0
+0,tcp,private,S0,0,0,320,320,1.0,0.0,1.0,0.0
+2,tcp,ftp,SF,180,240,1,1,0.0,0.0,1.0,0.0
+0,tcp,http,SF,412,8920,8,8,0.0,0.0,1.0,0.0
+0,tcp,finger,REJ,0,0,80,2,0.1,0.9,0.1,0.9
